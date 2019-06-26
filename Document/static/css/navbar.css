@@ -1,0 +1,49 @@
+.navbar-fixed-top {
+
+	             background-color: #222;
+	             color:#504B4B;
+	             font-size: 13pt;
+
+	             }
+
+.navbar-fixed-top .navbar-header a{
+
+
+	        	color:#bec6ca;
+	        	font-style:italic;
+	        	font-size: 15pt;
+}
+
+
+.nav {
+
+				position: absolute;
+				left: 97%;
+
+			}
+
+.nav li a {
+
+                background-color: #222;
+				color:#bec6ca;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+
+.nav li ul {
+				background-color: #222;
+				font-size: 11pt;
+				font-style:italic;
+				color:#bec6ca;
+				display:none;
+				position:absolute;
+				min-width:200px;
+				min-height:250px;
+			}
+
+.nav li:hover > ul {
+				display:block;
+				position: absolute;
+				right: 60%;
+			}

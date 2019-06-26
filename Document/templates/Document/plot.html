@@ -1,0 +1,54 @@
+{% include 'Document/base.html' %}
+
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/list.css' %}">
+
+
+
+<body>
+
+<div class = "fondo">
+    <div class="oscurecer">
+
+
+        <div class="container">
+
+            <center><h3 style="color:white"><i>Se esta representando la figura: {{filename}} </i></h3></center>
+            <br><br>
+
+
+            <script>
+                $(document).ready(function () {
+                    $("#plot").fadeIn(5000)
+
+
+
+                });
+
+            </script>
+
+            <div id="plot" style="display:none;">
+
+
+
+                <center><div>{{plot|safe}}</div></center>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body >
+
+{% endblock %}

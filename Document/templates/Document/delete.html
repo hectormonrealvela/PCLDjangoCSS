@@ -1,0 +1,17 @@
+{% extends "Document/borrar.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/list.css' %}">
+
+<body>
+
+<form action='.' method='POST'>
+    {% csrf_token %}
+</form>
+
+
+
+
+</body>
+{% endblock %}

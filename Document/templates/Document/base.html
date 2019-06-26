@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Representación PCL</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+<body>
+<div>
+
+    <!-- navbar -->
+    <div class=" navbar-fixed-top ">
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="#">Bienvenido, {{user.username}} </a>
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+					<li><a href=""><span class=" glyphicon glyphicon-menu-hamburger "></span> </a>
+						<ul>
+
+							<li><a href="{% url 'list' %}"><span class="glyphicon glyphicon-list-alt"></span> Lista</a></li>
+                    		<li><a href="{% url 'borrar' %}"><span class="glyphicon glyphicon-trash"></span> Borrar archivos</a></li>
+                    		<li><a href="{% url 'grafica' %}"><span class="glyphicon glyphicon-stats"></span> Representar gráfica</a></li>
+                    		<li><a href="#" data-toggle="modal" data-target="#bannerformmodal"><span class="glyphicon glyphicon-cloud-upload"></span> Upload</a></li>
+                    		<li><a href="#" data-toggle="modal" data-target="#offmodal"><span class="glyphicon glyphicon-off"></span> Cerrar sesión</a></li>
+
+						</ul>
+					</li>
+                </ul>
+            </div>
+
+    </div>
+</div>
+
+
+    <div class="modal fade offmodal"  role="dialog" aria-labelledby="offmodal" id="offmodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <center><i><h4 class="modal-title">¿Estás seguro de cerrar sesión? </h4></i></center>
+                </div>
+
+                 <div class="modal-footer">
+                <form action= "{% url 'logout' %}" method='POST'>
+                    {% csrf_token %}
+                    <center><p><input type='submit' value='Cerrar sesión' /><input type="submit" value="Cancel"  data-dismiss="modal"/></p></center>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+
+{% load i18n staticfiles %}
+
+    <div class="modal fade bannerformmodal"  role="dialog" aria-labelledby="bannerformmodal" id="bannerformmodal">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+          <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <center><i><h4 class="modal-title" id="myModalLabel">Selecciona los archivos que quieras subir</h4></i></center>
+                </div>
+
+              <div class="panel-body">
+                            <form action="{% url 'simple_upload' %}" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <center><input type="file" name="myfiles" multiple>
+                                <button type="submit">{% trans "Save" %}</button></center>
+                            </form>
+              </div>
+          </div>
+        </div>
+    </div>
+    </div>
+
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
+
+
+</body>
+</html>
+
+

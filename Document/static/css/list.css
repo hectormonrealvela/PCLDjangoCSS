@@ -1,0 +1,228 @@
+.fondo{
+   background:url(https://velodynelidar.com/images/products/hdl-64e/UserData_PointCloud2_Large.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    width: 105%;
+    height: 100vh;
+}
+
+.fondo .oscurecer {
+
+    background:rgba(40,57,90,.9);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    }
+
+
+
+.fondo .oscurecer p {
+    position: absolute;
+    top: 12.5%;
+    right: 30%;
+    font-style: italic;
+    font-size: 32px;
+    color:white;
+
+}
+
+
+
+
+.fondo .oscurecer .pagination {
+    position: absolute;
+    top: 92%;
+
+}
+
+
+
+.fondo .oscurecer .buscador{
+
+    position: absolute;
+    top:5%;
+    left: 65%;
+}
+
+.fondo .oscurecer table.caracol {
+
+   border-radius: 60px;
+   text-align:center;
+   width: 70%;
+   height: 50%;
+   position:absolute;top:20%;left:15%;
+   background-color:#DCDCDE;
+
+
+
+   box-shadow:0 17px 17px 17px rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+
+}
+
+
+
+
+.login-panel{
+    text-align:center;
+	font-size: 18pt;
+    position: absolute;
+    left: 35%;
+    top:15%;
+    width:360px;
+	height:500px;
+	box-shadow:0 17px 17px 17px rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	background:rgba(40,57,90,.9);
+	border-radius: 50px;
+
+}
+
+.login-panel .panel-heading .title{
+    text-align:center;
+    font-style:italic;
+    font-size: 20pt;
+    color: White;
+    width:100%;
+
+}
+
+.login-panel .login-formularios{
+
+    width:100%;
+	height:100%;
+	font-size: 13pt;
+	font-style:italic;
+	color: black;
+
+
+}
+
+.login-panel .login-formularios p{
+
+    position:absolute;
+    top:75%;
+    left:10%;
+    right:10%;
+	font-size: 13pt;
+	font-style:italic;
+	color: white;
+
+
+}
+
+.create-panel .register-formularios{
+
+    position: absolute;
+    top: 10%;
+    width:100%;
+	height:100%;
+	font-size: 13pt;
+	font-style:italic;
+	color: black;
+
+
+}
+
+.create-panel .register-formularios p{
+
+    position:absolute;
+    top:70%;
+    left:10%;
+    right:10%;
+	font-size: 12pt;
+	font-style:italic;
+	color: white;
+
+
+}
+.create-panel .panel-heading .title{
+    text-align:center;
+    font-style:italic;
+    font-size: 20pt;
+    color: White;
+    width:100%;
+
+}
+
+
+.create-panel{
+    text-align:center;
+	font-size: 18pt;
+    position: absolute;
+    left: 35%;
+    top:15%;
+    width:360px;
+	height:500px;
+	box-shadow:0 17px 17px 17px rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	background:rgba(40,57,90,.9);
+	border-radius: 50px;
+
+}
+
+
+
+
+
+::-webkit-input-placeholder {
+
+  color: black;
+  font-size: 17px;
+}
+::-moz-placeholder {
+
+  color: black;
+  font-size: 17px;;
+}
+:-ms-input-placeholder {
+
+  color: black;
+  font-size: 17px;
+}
+::placeholder {
+
+  color: black;
+  font-size: 17px;
+}
+
+
+
+
+.caracol th{
+
+       text-align:center;
+       font-style:italic;
+       font-size: 16pt;
+
+       /*background-color:#848BB6*/
+
+}
+
+
+
+.caracol tbody{
+
+       font-style:italic;
+       font-size: 12pt;
+
+       /*background-color:#DCDCDE;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
