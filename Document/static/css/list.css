@@ -1,4 +1,4 @@
-.fondo{
+..fondo{
    background:url(https://velodynelidar.com/images/products/hdl-64e/UserData_PointCloud2_Large.jpg) no-repeat center center fixed;
     background-size: 100% 100%;
     width: 105%;
@@ -31,6 +31,10 @@
 
 
 
+
+
+
+
 .fondo .oscurecer .pagination {
     position: absolute;
     top: 92%;
@@ -46,19 +50,13 @@
     left: 65%;
 }
 
-.fondo .oscurecer table.caracol {
-
-   border-radius: 60px;
-   text-align:center;
-   width: 70%;
-   height: 50%;
-   position:absolute;top:20%;left:15%;
-   background-color:#DCDCDE;
 
 
-
-   box-shadow:0 17px 17px 17px rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-
+.fondo .oscurecer .contenedor #plot.pcl{
+    position:absolute;
+    top:18%;
+    left:15%;
+    box-shadow:0 17px 17px 17px rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 
 
@@ -73,7 +71,7 @@
     width:360px;
 	height:500px;
 	box-shadow:0 17px 17px 17px rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
-	background:rgba(40,57,90,.9);
+	background:rgba(40,57,90,.8);
 	border-radius: 50px;
 
 }
@@ -162,8 +160,6 @@
 
 
 
-
-
 ::-webkit-input-placeholder {
 
   color: black;
@@ -187,6 +183,37 @@
 
 
 
+.fondo .oscurecer #myTable {
+
+   border-radius: 60px;
+   text-align:center;
+   width: 75%;
+   height: 60%;
+   position:absolute;top:20%;left:15%;
+   background-color:#DCDCDE;
+
+
+
+   box-shadow:0 17px 17px 17px rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+
+}
+
+
+.fondo .oscurecer  .test3{
+
+    position: absolute;
+    width: 60%;
+    top: 2.5%;
+    font-size: 14pt;
+    text-align:center;
+    font-style:italic;
+
+}
+
+
+
+
+
 
 .caracol th{
 
@@ -207,14 +234,6 @@
 
        /*background-color:#DCDCDE;*/
 }
-
-
-
-
-
-
-
-
 
 
 
