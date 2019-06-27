@@ -30,8 +30,7 @@
 
         </div>
 
-       <p>Selecciona el fichero que deseas eliminar:</p>
-
+        <p>Selecciona el fichero que deseas eliminar:</p>
 
         <table class ="caracol pure-table " id="myTable">
          <tr>
@@ -55,21 +54,21 @@
 
 
 
-         <div class="modal fade modal-dialog modal-lg" id="myModal{{Document.id}}" >
+        <div class="test3 modal  modal-dialog " id="myModal{{Document.id}}" >
             <div class="modal-content">
-                <div class="modal-body">
-                    <center><FONT SIZE=4 FACE="Times new roman"><i><p>¿Estas seguro de eliminar el fichero: {{Document.Nombre}}? </p></i></FONT></center>
+                <div class=" modal-body">
+                    ¿Estas seguro de eliminar el fichero: {{Document.Nombre}}?
                 </div>
             <div class="modal-footer">
                 <form action= "{% url 'delete' Document.id %}" method='POST'>
                     {% csrf_token %}
-                    <center><p><input type='submit' value='Delete' /><input type="submit" value="Cancel"  data-dismiss="modal"/></p></center>
+                    <center><input type='submit' value='Delete' /><input type="submit" value="Cancel"  data-dismiss="modal"/></center>
                 </form>
             </div>
 
             </div>
 
-         </div>
+        </div>
 
 
            {% endfor %}
@@ -116,6 +115,8 @@
 
 
 {% endblock %}
+
+
 
 
 
