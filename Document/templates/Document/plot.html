@@ -11,44 +11,25 @@
 
 <div class = "fondo">
     <div class="oscurecer">
+        <p style="color:white; postiion:absolute; top:8%; left:15%; right:10%;"><i>Se esta representando la figura: {{filename}} </i><p>
 
 
-        <div class="container">
-
-            <center><h3 style="color:white"><i>Se esta representando la figura: {{filename}} </i></h3></center>
-            <br><br>
-
-
+        <div class="contenedor">
             <script>
                 $(document).ready(function () {
                     $("#plot").fadeIn(5000)
-
 
 
                 });
 
             </script>
 
-            <div id="plot" style="display:none;">
+            <div id="plot" class="pcl">
 
-
-
-                <center><div>{{plot|safe}}</div></center>
+               {{plot|safe}}
 
             </div>
         </div>
 
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-</body >
-
-{% endblock %}
