@@ -1,7 +1,7 @@
 {% include 'Document/base.html' %}
-
-
 {% block content %}
+
+
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/list.css' %}">
 
@@ -11,20 +11,19 @@
 
 <div class = "fondo">
     <div class="oscurecer">
-        <p style="color:white; postiion:absolute; top:8%; left:15%; right:10%;"><i>Se esta representando la figura: {{filename}} </i><p>
+        <p style="color:white; position:absolute; top:8%; margin-left:auto; margin-right:auto; left:0; right:0;"><i>Se esta representando la figura: {{filename}} </i><p>
+
 
 
         <div class="contenedor">
-            <script>
+
+         <script>
                 $(document).ready(function () {
-                    $("#plot").fadeIn(5000)
-
-
+                    $("#plot").fadeIn(4000)
                 });
+         </script>
 
-            </script>
-
-            <div id="plot" class="pcl">
+            <div id="plot" class="pcl" style="display: none;" >
 
                {{plot|safe}}
 
@@ -33,3 +32,7 @@
 
     </div>
 </div>
+</body>
+
+
+{% endblock %}
