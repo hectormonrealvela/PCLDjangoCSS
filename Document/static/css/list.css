@@ -1,8 +1,18 @@
-..fondo{
-   background:url(https://velodynelidar.com/images/products/hdl-64e/UserData_PointCloud2_Large.jpg) no-repeat center center fixed;
-    background-size: 100% 100%;
-    width: 105%;
-    height: 100vh;
+
+body,html{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background:url(https://velodynelidar.com/images/products/hdl-64e/UserData_PointCloud2_Large.jpg) no-repeat center fixed;
+ background-size: 100% 100%;
+
+
+
+}
+
+.fondo{
+   width: 100%;
+   height: 100%;
 }
 
 .fondo .oscurecer {
@@ -20,17 +30,18 @@
 
 .fondo .oscurecer p {
     position: absolute;
-    top: 12.5%;
-    right: 30%;
+    top: 12%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right:0;
+
     font-style: italic;
     font-size: 32px;
     color:white;
 
 }
-
-
-
-
 
 
 
@@ -47,17 +58,21 @@
 
     position: absolute;
     top:5%;
-    left: 65%;
+    right:1.1%;
+
 }
 
 
 
 .fondo .oscurecer .contenedor #plot.pcl{
     position:absolute;
-    top:18%;
-    left:15%;
+    top:55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-shadow:0 17px 17px 17px rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+
 }
+
 
 
 
@@ -66,7 +81,10 @@
     text-align:center;
 	font-size: 18pt;
     position: absolute;
-    left: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right:0;
     top:15%;
     width:360px;
 	height:500px;
@@ -183,61 +201,47 @@
 
 
 
-.fondo .oscurecer #myTable {
-
-   border-radius: 60px;
-   text-align:center;
+.fondo .oscurecer #myTable.caracol {
+   position:absolute;
    width: 75%;
-   height: 60%;
-   position:absolute;top:20%;left:15%;
+   margin-left: auto;
+   margin-right: auto;
+   left: 0;
+   right:0;
+   top:22%;
    background-color:#DCDCDE;
-
-
-
    box-shadow:0 17px 17px 17px rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+   border-collapse: separate !important;
+   border-radius: 50px;
+   overflow: hidden;
+
 
 }
-
-
-.fondo .oscurecer  .test3{
-
-    position: absolute;
-    width: 60%;
-    top: 2.5%;
-    font-size: 14pt;
-    text-align:center;
-    font-style:italic;
-
-}
-
-
-
-
 
 
 .caracol th{
 
+
        text-align:center;
        font-style:italic;
-       font-size: 16pt;
+       font-size: 20pt;
+       height: 85px;
 
-       /*background-color:#848BB6*/
 
 }
 
 
 
-.caracol tbody{
+.caracol td{
 
+
+       text-align:center;
        font-style:italic;
-       font-size: 12pt;
+       font-size: 15pt;
+       height: 70px;
 
-       /*background-color:#DCDCDE;*/
+
 }
-
-
-
-
 
 
 
