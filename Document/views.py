@@ -206,7 +206,8 @@ def delete_view(request, id): # borramos el documento que hayamos escogido anter
 #****************************************************************************************** CREAR PCL ***********************************************************#
 
 
-def create_image(request, numb): # Representación Nube de puntos.
+
+def create_image(request, numb,): # Representación Nube de puntos.
 
     document = Document.objects.filter(user=request.user).get(numb=numb)
     filename = document.document.path
@@ -240,26 +241,41 @@ def create_image(request, numb): # Representación Nube de puntos.
 
     data = [trace1]
     layout = go.Layout(
+        paper_bgcolor='rgba(40,57,90,.8)',
+
+                         #paper_bgcolor='rgba(40,57,90,.9)',
+             
         scene=dict(
-            xaxis=dict(
-                range=[-100, 100], ),
-            yaxis=dict(
-                range=[-100, 100], ),
-            zaxis=dict(
-                range=[-100, 100], ), ),
-        width=1000,
-        height=700, showlegend=False)
+            xaxis=dict(showline=False,showticklabels=False,showgrid=False, zeroline=False,
+                range=[-125, 125], ),
+            yaxis=dict(showline=False,showticklabels=False,showgrid=False, zeroline=False,
+                range=[-125, 125], ),
+            zaxis=dict(showline=False,showticklabels=False,showgrid=False, zeroline=False,
+                range=[-125, 125], ), ),
+
+        width=950,
+        height=750,
+        showlegend=False)
 
     fig = go.Figure(data=data, layout=layout, )
     plot_div = plot(fig, output_type='div', include_plotlyjs=False)
+    form = DescriptionForm(request.POST or None)
+
+    if request.method == 'POST':
+        message = get_object_or_404(Document, numb=numb)
+        form = DescriptionForm(request.POST,instance=message)
+        if form.is_valid():
+            form.save()
+
 
     context = {
+        "form":form,
+
         "plot": plot_div,
         "filename": nombre,
         "Document": document,
 
     }
-
     return render(request, 'Document/plot.html',context)
 
 
